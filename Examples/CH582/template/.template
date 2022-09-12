@@ -1,0 +1,17 @@
+Mcu Type=CH58x
+Address=0x00000000
+Target Path=obj/template.hex
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+
+Vendor=WCH
+Link=WCH-Link
+Toolchain=RISC-V
+Series=CH58X
+Description=Website: http://www.wch.cn/products/CH583.html?\nROM(byte): 448K, SRAM(byte): 32K, CHIP PINS: 28, GPIO PORTS: 20.\nCH583 is a 32-bit RISC microcontroller integrating ble wireless communication. On chip integrated 2Mbps lower-power Bluetooth ble communication module 2 full speed USB hosts and device controllers and transceivers, 2SPIs, 4 serial ports, ADC touch key detection module, RTC and other rich peripheral resources.
+
+PeripheralVersion=1.2
+
+MCU=CH582F

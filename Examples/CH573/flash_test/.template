@@ -1,0 +1,15 @@
+Mcu Type=CH57x
+Address=0x00000000
+Program=true
+Verify=true
+Reset=true
+
+Vendor=WCH
+Link=WCH-Link
+Toolchain=RISC-V
+Series=CH57X
+Description=Website: http://www.wch.cn/products/CH573.html?\r\nROM(byte): 192K, SRAMX(byte): 24K,SRAMS(byte): 32K, CHIP PINS: 20, GPIO PORTS: 15.\r\nCH571 is simplified based on CH573, which eliminates USB host, touch button detection module, 8-bit PWM module and two serial ports. The total capacity of flashrom is only 256Kb, and only supports power supply voltage above 2.3V. In addition to the above differences, others are basically the same as CH573. You can refer to CH573 manual and materials directly.
+
+PeripheralVersion=1.8
+MCU=CH573F
+Target Path=obj/flash_test.hex
