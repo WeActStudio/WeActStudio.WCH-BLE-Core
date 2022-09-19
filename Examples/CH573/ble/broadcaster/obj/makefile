@@ -54,7 +54,7 @@ all: broadcaster.elf secondary-outputs
 
 # 工具调用
 broadcaster.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused  -g -T "F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Software\CH573\ble\broadcaster\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Software\CH573\ble\broadcaster\StdPeriphDriver" -L"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Software\CH573\ble\broadcaster\ble\lib" -Xlinker --print-memory-usage -Wl,-Map,"broadcaster.map" --specs=nano.specs --specs=nosys.specs -o "broadcaster.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused  -g -T "F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\StdPeriphDriver" -L"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\ble\lib" -Xlinker --print-memory-usage -Wl,-Map,"broadcaster.map" --specs=nano.specs --specs=nosys.specs -o "broadcaster.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 broadcaster.hex: broadcaster.elf
 	@	riscv-none-embed-objcopy -O ihex "broadcaster.elf"  "broadcaster.hex"

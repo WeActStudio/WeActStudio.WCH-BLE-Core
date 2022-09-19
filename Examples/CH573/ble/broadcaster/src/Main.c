@@ -47,6 +47,7 @@ void key_callback(uint8_t keys)
     if (keys&HAL_KEY_SW_1)
     {
         printf("key1 pressed\r\n");
+        HalLedSet(HAL_LED_ALL, HAL_LED_MODE_OFF);
         HalLedBlink(1, 2, 30, 1000);
     }
 }
