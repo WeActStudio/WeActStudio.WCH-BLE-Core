@@ -5,7 +5,7 @@ CH573F
 > 60Mhz Max,18KB RAM,448KB ROM,RISC-V3A,BLE 4.2
 
 CH582F
-> 60Mhz Max,20KB RAM,64KB ROM,RISC-V4A,BLE 5.0
+> 60Mhz Max,32KB RAM,448KB ROM,RISC-V4A,BLE 5.3
 
 WCH 官方网站 www.wch.cn(zh-CN) / www.wch-ic.com(en)
 
