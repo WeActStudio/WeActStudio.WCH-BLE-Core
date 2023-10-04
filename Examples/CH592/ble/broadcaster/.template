@@ -1,0 +1,17 @@
+Mcu Type=CH59x
+Address=0x00000000
+Target Path=obj/broadcaster.hex
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+
+Vendor=WCH
+Link=WCH-Link
+Toolchain=RISC-V
+Series=CH59X
+RTOS=NoneOS
+Description=Website: http://www.wch.cn/downloads/CH592DS1_PDF.html?\nROM(byte): 448K, SRAM(byte): 26K, CHIP PINS: 28, GPIO PORTS: 20\nCH592F integrates BLE 32-bit RISC-V microcontroller MCU, 448K ROM, 24K SRAM, low average power consumption, power-off mode is only 0.3uA. Integrate USB host and device, segment LCD driver, ADC, 4-way serial port, SPI, I2C, touch key detection module, RTC, power management, etc, provide Bluetooth protocol stack and APP support.
+
+PeripheralVersion=1.0
+MCU=CH592F

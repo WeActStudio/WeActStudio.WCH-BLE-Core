@@ -2,7 +2,7 @@
  - WeAct Studio Official Link
  - taobao: weactstudio.taobao.com
  - aliexpress: weactstudio.aliexpress.com
- - github: github.com/WeActTC
+ - github: github.com/WeActStudio
  - gitee: gitee.com/WeAct-TC
  - blog: www.weact-tc.cn
  ---------------------------------------*/
@@ -13,7 +13,7 @@
 /*********************************************************************
  * @fn      main
  *
- * @brief   Ö÷º¯Êý
+ * @brief   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *
  * @return  none
  */
