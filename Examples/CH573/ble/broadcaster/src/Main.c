@@ -12,7 +12,7 @@
 #include "HAL.h"
 #include "broadcaster.h"
 
-uint8_t TxBuff[] = "This is a tx exam\r\n";
+uint8_t TxBuff[] = "This is a tx example\r\n";
 uint8_t RxBuff[100];
 uint8_t trigB;
 
@@ -77,6 +77,7 @@ int main()
     PRINT("%s\n", VER_LIB);
     CH57X_BLEInit();
     HAL_Init();
+    USB_DeviceInit();
     HalKeyConfig(key_callback);
     GAPRole_BroadcasterInit();
     Broadcaster_Init();

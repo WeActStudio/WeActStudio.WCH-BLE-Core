@@ -2,6 +2,10 @@
 # 自动生成的文件。不要编辑！
 ################################################################################
 
+SRC_DIR := "$(PWD)/"
+CFLAGS := -I"$(SRC_DIR)StdPeriphDriver/inc" -I"$(SRC_DIR)RVMSIS" -I"$(SRC_DIR)ble/lib" -I"$(SRC_DIR)ble/profile" -I"$(SRC_DIR)ble/hal" -I"$(SRC_DIR)ble/app"
+LDFLAGS := -L"$(SRC_DIR)StdPeriphDriver" -L"$(SRC_DIR)ble/lib"
+
 -include ../makefile.init
 
 RM := rm -rf
@@ -54,7 +58,9 @@ all: broadcaster.elf secondary-outputs
 
 # 工具调用
 broadcaster.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused  -g -T "F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\StdPeriphDriver" -L"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\ble\lib" -Xlinker --print-memory-usage -Wl,-Map,"broadcaster.map" --specs=nano.specs --specs=nosys.specs -o "broadcaster.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@ echo CFLAGS: $(CFLAGS)
+	@ echo LDFLAGS: $(LDFLAGS)
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused  -g -T "$(SRC_DIR)Ld/Link.ld" -nostartfiles -Xlinker --gc-sections $(LDFLAGS) -Xlinker --print-memory-usage -Wl,-Map,"broadcaster.map" --specs=nano.specs --specs=nosys.specs -o "broadcaster.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 broadcaster.hex: broadcaster.elf
 	@	riscv-none-embed-objcopy -O ihex "broadcaster.elf"  "broadcaster.hex"

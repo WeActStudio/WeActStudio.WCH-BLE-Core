@@ -11,7 +11,8 @@ C_SRCS += \
 ../StdPeriphDriver/CH57x_pwr.c \
 ../StdPeriphDriver/CH57x_sys.c \
 ../StdPeriphDriver/CH57x_uart0.c \
-../StdPeriphDriver/CH57x_uart1.c 
+../StdPeriphDriver/CH57x_uart1.c \
+../StdPeriphDriver/CH57x_usbdev.c
 
 OBJS += \
 ./StdPeriphDriver/CH57x_adc.o \
@@ -21,7 +22,9 @@ OBJS += \
 ./StdPeriphDriver/CH57x_pwr.o \
 ./StdPeriphDriver/CH57x_sys.o \
 ./StdPeriphDriver/CH57x_uart0.o \
-./StdPeriphDriver/CH57x_uart1.o 
+./StdPeriphDriver/CH57x_uart1.o \
+./StdPeriphDriver/CH57x_usbdev.o
+
 
 C_DEPS += \
 ./StdPeriphDriver/CH57x_adc.d \
@@ -31,11 +34,12 @@ C_DEPS += \
 ./StdPeriphDriver/CH57x_pwr.d \
 ./StdPeriphDriver/CH57x_sys.d \
 ./StdPeriphDriver/CH57x_uart0.d \
-./StdPeriphDriver/CH57x_uart1.d 
+./StdPeriphDriver/CH57x_uart1.d \
+./StdPeriphDriver/CH57x_usbdev.d
 
 
 # Each subdirectory must supply rules for building sources it contributes
 StdPeriphDriver/%.o: ../StdPeriphDriver/%.c
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused  -g -DDEBUG=1 -DHAL_KEY=TRUE -DHAL_LED=TRUE -DHAL_SLEEP=TRUE -DCLK_OSC32K=0 -I"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\StdPeriphDriver\inc" -I"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\RVMSIS" -I"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\ble\lib" -I"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\ble\profile" -I"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\ble\hal" -I"F:\WeActStudio1\Products\WeAct-CH57xCoreBoard\Datalink\Examples\CH573\ble\broadcaster\ble\app" -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused  -g -DDEBUG=1 -DHAL_KEY=TRUE -DHAL_LED=TRUE -DHAL_SLEEP=TRUE -DCLK_OSC32K=0 $(CFLAGS) -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@	@
 
