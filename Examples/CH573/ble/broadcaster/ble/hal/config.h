@@ -17,9 +17,9 @@
 #define CHIP_ID                             ID_CH573
 
 #ifdef CH57xBLE_ROM
-#include "CH57xBLE_ROM.H"
+#include "CH57xBLE_ROM.h"
 #else
-#include "CH57xBLE_LIB.H"
+#include "CH57xBLE_LIB.h"
 #endif
 #include "CH57x_common.h"
 
