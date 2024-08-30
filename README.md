@@ -11,7 +11,7 @@ CH582F
 CH592F
 > 60Mhz Max,32KB RAM,448KB ROM,RISC-V4C,BLE 5.4
 
-WCH Official Website www.wch.cn(zh-CN) / www.wch-ic.com(en)
+WCH Official Website www.wch.cn (zh-CN) / www.wch-ic.com (en)
 
 |Dir Name|Explain|
 | :--:|:--:|
