@@ -1,4 +1,4 @@
-* [中文版本](./README-zh.md)
+* [中文版本](./README_zh.md)
 # WeActStudio.WCH-BLE-Core
 ![display](Images/1.png)
 ![display](Images/2.png)
