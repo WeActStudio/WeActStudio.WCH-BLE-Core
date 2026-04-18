@@ -1,16 +1,19 @@
 * [中文版本](./README-zh.md)
 # WeActStudio.WCH-BLE-Core
 ![display](Images/1.png)
-![display](Images/2.png)
 CH573F
 > 60Mhz Max,18KB RAM,448KB ROM,RISC-V3A,BLE 4.2
 
 CH582F
 > 60Mhz Max,32KB RAM,448KB ROM,RISC-V4A,BLE 5.3
 
+![display](Images/2.png)
 CH592F
 > 60Mhz Max,32KB RAM,448KB ROM,RISC-V4C,BLE 5.4
 
+![display](Images/3.png)
+CH584F
+> 78Mhz Max,96KB RAM,448+24+32KB ROM,RISC-V3C,BLE 5.4
 WCH Official Website www.wch.cn(zh-CN) / www.wch-ic.com(en)
 
 |Dir Name|Explain|
